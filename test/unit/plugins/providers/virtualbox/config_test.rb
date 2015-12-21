@@ -46,7 +46,7 @@ describe VagrantPlugins::ProviderVirtualBox::Config do
 
     it "should have one NAT adapter" do
       expect(subject.network_adapters).to eql({
-        1 => [:nat, {}],
+        2 => [:nat, {}],
       })
     end
   end
@@ -69,8 +69,8 @@ describe VagrantPlugins::ProviderVirtualBox::Config do
 
   describe "#network_adapter" do
     it "configures additional adapters" do
-      subject.network_adapter(2, :bridged, auto_config: true)
-      expect(subject.network_adapters[2]).to eql(
+      subject.network_adapter(3, :bridged, auto_config: true)
+      expect(subject.network_adapters[3]).to eql(
         [:bridged, auto_config: true])
     end
   end
