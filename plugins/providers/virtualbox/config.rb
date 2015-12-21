@@ -76,8 +76,8 @@ module VagrantPlugins
         @linked_clone = UNSET_VALUE
         @linked_clone_snapshot = UNSET_VALUE
 
-        # We require that network adapter 1 is a NAT device.
-        network_adapter(1, :nat)
+        # We require that network adapter 2 is a NAT device.
+        network_adapter(2, :nat)
       end
 
       # Customize the VM by calling `VBoxManage` with the given
